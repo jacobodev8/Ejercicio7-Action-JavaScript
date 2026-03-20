@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
-    "@actions/core": "^3.0.0"
-  },
   "devDependencies": {
     "@vercel/ncc": "^0.38.4"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0"
   }
 }
