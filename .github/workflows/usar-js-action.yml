@@ -1,0 +1,24 @@
+name: Ejercicio 7 - Probar Action JS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generar-settings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ejecutar Action JS
+        uses: ./.github/actions/maven-settings
+        with:
+          user: "jacobo"
+          url_mirror: "https://maven.mirror.es"
+          password: ${{ secrets.MAVEN_PASSWORD }}
+
+      - name: Mostrar archivo generado
+        run: cat settings.xml

@@ -1,0 +1,17 @@
+name: "Crear settings.xml de Maven"
+description: "Genera un archivo settings.xml usando inputs y un secreto"
+
+inputs:
+  user:
+    description: "Usuario del servidor Maven"
+    required: true
+  url_mirror:
+    description: "URL del mirror Maven"
+    required: true
+  password:
+    description: "Password del servidor Maven"
+    required: true
+
+runs:
+  using: "node20"
+  main: "index.js"
